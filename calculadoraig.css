@@ -1,0 +1,128 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dcb3d5;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculadora{
+    width: 350px;
+    position: fixed;
+    top: 10%;
+}
+.calcular{
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.inicio{
+    margin-bottom: 20px;
+}
+.inicio h1{
+    color: #722074;
+    font-size: 21px;
+    border-bottom: 0.5px solid #7878784b; 
+    text-align: center;
+}
+.inicio p{
+    color: rgb(54, 54, 54);
+    font-size: 11px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.calcular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(246, 246, 240);
+    margin-bottom: 30px;
+    height: 200px;
+
+}
+
+.calcular p{
+    color: rgb(54, 54, 54);
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+#dum {
+    text-align: center;
+    width: 80%;
+    height: 35px;
+    background: transparent; /* sem cor */
+    border: 1px solid #b8a1d9; /* borda fina lilás */
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    color: #706c75; /* cor do texto (data) */
+    font-size: 14px;
+    outline: none;
+}
+
+#buttoncalc{
+    background: linear-gradient(135deg, #7039a7, #a075cb);
+    transition: 0.3s;
+    width: 80%;
+    height: 35px;
+    border-radius: 10px;
+    border: 0;
+    margin-bottom: 20px;
+    color:beige;
+    font-weight: 600;
+}
+
+#buttoncalc:hover {
+    background: linear-gradient(135deg,#856a9f, #7039a7);
+}
+
+.resultado {
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.resultado.mostrar {
+    display: block;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(246, 246, 240);
+    padding: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.resultado h2{
+    color: rgb(54, 54, 54);
+    font-size: 12px;
+    font-weight: 200;
+    border-bottom: 0.5px solid #7878784b; 
+}
+#resultado{
+    text-align: center;
+    color: #531054;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #7878784b; 
+}
+.msg {
+    color: rgb(54, 54, 54);
+    font-size: 11px;
+}

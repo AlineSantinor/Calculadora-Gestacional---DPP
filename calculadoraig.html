@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadoraig.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title> Calculadora Gestacional - Data Provável de Parto</title>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="inicio">
+            <h1> <i class="fa-solid fa-baby-carriage"></i> Calculadora Gestacional</h1>
+            <p>Calcule a data provável de parto - Regra de Naegele</p>
+        </div>
+        
+        <div class="calcular">
+            <p>Data da Última Menstruação (DUM)</p>
+            <input type="date" id="dum">
+            <button onclick="calcularDPP()" id="buttoncalc">Calcular</button>
+        </div>
+
+        <div class="resultado" id="resultadoBox">
+            <h2>Resultado:</h2>
+            <output id="resultado"></output>
+        </div>
+    </div>
+
+
+<script>
+    function calcularDPP() {
+      const dum = document.getElementById("dum").value;
+
+      if (!dum) {
+        document.getElementById("resultado").innerText = "Informe a data.";
+        return;
+      }
+
+      let data = new Date(dum);
+
+      // Regra de Naegele
+      data.setDate(data.getDate() + 7);
+      data.setMonth(data.getMonth() - 3);
+      data.setFullYear(data.getFullYear() + 1);
+
+
+
+    const meses = [
+    "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    ];
+    
+    let msg = "Data Provável de parto: ";
+    let dia = data.getDate();
+    let mes = meses[data.getMonth()];
+    let ano = data.getFullYear();
+
+    document.getElementById("resultado").innerHTML =
+`<span class="msg">Data Provável de Parto:</span><br> ${dia} de ${mes} de ${ano}`;
+    
+    document.getElementById("resultadoBox").classList.add("mostrar");
+    }
+  </script>
+    
+</body>
+</html>
