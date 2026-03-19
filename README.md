@@ -4,7 +4,7 @@ Calculadora gestacional que estima a idade da gravidez e a data provável do par
 Como calcular a DPP
 -> Identifique o 1º dia da última menstruação (DUM).
 -> Somar 7 dias ao valor do dia.
--> Ajuste o mês conforme a data da DUM: *De Janeiro a Março: Some 9 meses. *De Abril a Dezembro: Subtraia 3 meses (e some 1 ao ano).
+-> Ajuste o mês conforme a data da DUM: *De Janeiro a Março: Somar 9 ao mês. *De Abril a Dezembro: Subtraia 3 ao mês (e some 1 ao ano).
 
 Imagens do Projeto:
 <img width="877" height="545" alt="calcDPP2" src="https://github.com/user-attachments/assets/d831b98c-fb42-4eec-9946-b4c280e60ece" />
